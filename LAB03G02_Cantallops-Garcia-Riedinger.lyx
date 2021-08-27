@@ -1317,5 +1317,79 @@ f_{H}=\frac{1}{2\pi\left[R_{C\pi}C_{\pi}+R_{C\mu}C_{\mu}\right]}=43\ [kHz]
 
 \end_layout
 
+\begin_layout Section
+Simulación:
+\end_layout
+
+\begin_layout Standard
+assdfskljdflksjfsldjkl simula simulacion.
+\end_layout
+
+\begin_layout Section
+Resultados de la implementación física y conclusiones:
+\end_layout
+
+\begin_layout Standard
+resultados y tabla alsjdfsalkjdflsakjflksadjf.
+\end_layout
+
+\begin_layout Chapter
+Colector común:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito esquemático de un amplificador en configuración de emisor común
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:colector comun"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En la Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:colector comun"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ se puede observar el circuito a calcular según los siguientes parámetros
+ de diseño:
+\end_layout
+
 \end_body
 \end_document
