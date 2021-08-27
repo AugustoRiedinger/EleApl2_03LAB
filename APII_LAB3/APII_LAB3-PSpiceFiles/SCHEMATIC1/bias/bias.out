@@ -1,0 +1,87 @@
+
+**** 08/20/21 15:11:22 ******* PSpice Lite (April 2011) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\SPB_DATA\APII_LAB3\apii_lab3-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\Cadence\SPB_16.5\tools\PSpice\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source APII_LAB3
+.EXTERNAL OUTPUT Vin
+.EXTERNAL OUTPUT VCC
+Q_Q1         N14518 N14558 N14505 BC548A 
+R_RB1         N14558 VCC  1k TC=0,0 
+R_RB2         0 N14558  1k TC=0,0 
+R_RE         0 N14505  1k TC=0,0 
+R_RL         0 N14514  1k TC=0,0 
+R_RS         N144021 VIN  1k TC=0,0 
+R_RC         VCC N14518  1k TC=0,0 
+C_C2         N14518 N14514  1n  TC=0,0 
+C_C1         N144021 N14558  1n  TC=0,0 
+C_CE         0 N14505  1n  TC=0,0 
+G_G1         N15337 0 N15291 N15275 100
+R_r         s VIN N150450  1k TC=0,0 
+R_r         b 0 N15291  1k TC=0,0 
+
+ERROR(ORPSIM-15089): Can not re-define R_r. R_r is either a system defined variable or has already been defined
+------------$
+ERROR(ORPSIM-16371): Extra text on line
+R_hie         N15275 N15291  1k TC=0,0 
+R_r         e 0 N15275  1k TC=0,0 
+
+ERROR(ORPSIM-15089): Can not re-define R_r. R_r is either a system defined variable or has already been defined
+------------$
+ERROR(ORPSIM-16371): Extra text on line
+R_r         c 0 N15337  1k TC=0,0 
+
+ERROR(ORPSIM-15089): Can not re-define R_r. R_r is either a system defined variable or has already been defined
+------------$
+ERROR(ORPSIM-16371): Extra text on line
+R_r         l 0 N15355  1k TC=0,0 
+
+ERROR(ORPSIM-15089): Can not re-define R_r. R_r is either a system defined variable or has already been defined
+------------$
+ERROR(ORPSIM-16371): Extra text on line
+C_c         1 N150450 N15291  1n  TC=0,0 
+C_c         2 N15337 N15355  1n  TC=0,0 
+
+ERROR(ORPSIM-15089): Can not re-define C_c. C_c is either a system defined variable or has already been defined
+------------$
+ERROR(ORPSIM-16371): Extra text on line
+C_cpi         N15275 N15291  1n  TC=0,0 
+C_cu         N15337 N15291  1n  TC=0,0 
+C_c         e 0 N15275  1n  TC=0,0 
+
+ERROR(ORPSIM-15089): Can not re-define C_c. C_c is either a system defined variable or has already been defined
+------------$
+ERROR(ORPSIM-16371): Extra text on line
+V_VF1         N161170 0 DC 0Vdc AC 1Vac 
+V_VT1         VIN N161170  AC 0
++SIN 0 1 1000 0 0 0
+V_Vdc1         VCC 0 15Vdc
+
+**** RESUMING bias.cir ****
+.END
+

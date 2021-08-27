@@ -1,0 +1,66 @@
+
+**** 08/20/21 15:14:04 ******* PSpice Lite (April 2011) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-time_domain"  [ D:\SPB_DATA\APII_LAB3\apii_lab3-pspicefiles\schematic1\time_domain.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "time_domain.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\Cadence\SPB_16.5\tools\PSpice\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source APII_LAB3
+.EXTERNAL OUTPUT Vin
+.EXTERNAL OUTPUT VCC
+Q_Q1         N14518 N14558 N14505 BC548A 
+R_RB1         N14558 VCC  1k TC=0,0 
+R_RB2         0 N14558  1k TC=0,0 
+R_RE         0 N14505  1k TC=0,0 
+R_RL         0 N14514  1k TC=0,0 
+R_RS         N144021 VIN  1k TC=0,0 
+R_RC         VCC N14518  1k TC=0,0 
+C_C2         N14518 N14514  1n  TC=0,0 
+C_C1         N144021 N14558  1n  TC=0,0 
+C_CE         0 N14505  1n  TC=0,0 
+G_G1         N15337 0 N15291 N15275 100
+R_rrss         VIN N150450  1k TC=0,0 
+R_rrbb         0 N15291  1k TC=0,0 
+R_hie         N15275 N15291  1k TC=0,0 
+R_rree         0 N15275  1k TC=0,0 
+R_rrcc         0 N15337  1k TC=0,0 
+R_rrll         0 N15355  1k TC=0,0 
+C_cc11         N150450 N15291  1n  TC=0,0 
+C_cc22         N15337 N15355  1n  TC=0,0 
+C_cpi         N15275 N15291  1n  TC=0,0 
+C_cu         N15337 N15291  1n  TC=0,0 
+C_ccee         0 N15275  1n  TC=0,0 
+V_VF1         N161170 0 DC 0Vdc AC 1Vac 
+V_VT1         VIN N161170  AC 0
++SIN 0 1 1000 0 0 0
+V_Vdc1         VCC 0 15Vdc
+
+**** RESUMING time_domain.cir ****
+.END
+
+ERROR(ORPSIM-15113): Model BC548A used by Q_Q1 is undefined
+

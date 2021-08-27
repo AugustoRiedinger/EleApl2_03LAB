@@ -1,0 +1,49 @@
+* source APII_LAB3
+.EXTERNAL OUTPUT Vin
+.EXTERNAL OUTPUT VCC
+R_RB1         N14558 VCC  30k TC=0,0 
+R_RB2         0 N14558  30k TC=0,0 
+R_RE         0 N14505  1650 TC=0,0 
+R_RL         0 N14514  10k TC=0,0 
+R_RS         N144021 VIN  50 TC=0,0 
+R_RC         VCC N14518  100 TC=0,0 
+C_C2         N14518 N14514  1n  TC=0,0 
+C_C1         N144021 N14558  1n  TC=0,0 
+C_CE         0 N14505  1n  TC=0,0 
+G_G1         N15337 N15275 N15291 N15275 100
+R_rrss         VIN N150450  1k TC=0,0 
+R_rrbb         0 N15291  1k TC=0,0 
+R_hie         N15275 N15291  1k TC=0,0 
+R_rree         0 N15275  1k TC=0,0 
+R_rrcc         0 N15337  1k TC=0,0 
+R_rrll         0 N15355  1k TC=0,0 
+C_cc11         N150450 N15291  1n  TC=0,0 
+C_cc22         N15337 N15355  1n  TC=0,0 
+C_cpi         N15275 N15291  1n  TC=0,0 
+C_cu         N15337 N15291  1n  TC=0,0 
+C_ccee         0 N15275  1n  TC=0,0 
+V_VF1         N161170 0 DC 0Vdc AC 1Vac 
+V_VT1         VIN N161170  AC 0
++SIN 0 1 1000 0 0 0
+V_Vdc1         VCC 0 15Vdc
+Q_Q1         N14518 N14558 N14505 BC548A 
+R_RB4         0 N19154  30k TC=0,0 
+R_RC1         VCC N19136  100 TC=0,0 
+C_C4         N190341 N19154  1n  TC=0,0 
+R_RE1         0 N19098  1650 TC=0,0 
+R_RB3         N19154 VCC  30k TC=0,0 
+C_C3         N19098 N19124  1n  TC=0,0 
+R_RL1         0 N19124  10k TC=0,0 
+Q_Q2         N19136 N19154 N19098 BC548A 
+R_RS1         N190341 VIN  50 TC=0,0 
+C_ccee1         N199270 N19935  1n  TC=0,0 
+C_cc12         N197430 N19943  1n  TC=0,0 
+R_rrbb1         0 N19943  1k TC=0,0 
+G_G2         N19977 N19935 N19943 N19935 100
+C_cpi1         N19935 N19943  1n  TC=0,0 
+R_hie1         N19935 N19943  1k TC=0,0 
+R_rree1         0 N19935  1k TC=0,0 
+R_rrcc1         0 N19977  1k TC=0,0 
+C_cu1         N19977 N19943  1n  TC=0,0 
+R_rrss1         VIN N197430  1k TC=0,0 
+R_rrll1         0 N199270  1k TC=0,0 

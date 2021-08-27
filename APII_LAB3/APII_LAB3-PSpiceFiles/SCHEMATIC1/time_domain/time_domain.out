@@ -1,0 +1,197 @@
+
+**** 08/20/21 18:32:42 ******* PSpice Lite (April 2011) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-time_domain"  [ D:\SPB_DATA\APII_LAB3\apii_lab3-pspicefiles\schematic1\time_domain.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "time_domain.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "D:/Cadence/SPB_16.5/tools/pspice/library/ebipolar.lib" 
+* From [PSPICE NETLIST] section of D:\Cadence\SPB_16.5\tools\PSpice\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source APII_LAB3
+.EXTERNAL OUTPUT Vin
+.EXTERNAL OUTPUT VCC
+R_RB1         N14558 VCC  30k TC=0,0 
+R_RB2         0 N14558  30k TC=0,0 
+R_RE         0 N14505  1650 TC=0,0 
+R_RL         0 N14514  10k TC=0,0 
+R_RS         N144021 VIN  50 TC=0,0 
+R_RC         VCC N14518  100 TC=0,0 
+C_C2         N14518 N14514  1n  TC=0,0 
+C_C1         N144021 N14558  1n  TC=0,0 
+C_CE         0 N14505  1n  TC=0,0 
+G_G1         N15337 N15275 N15291 N15275 100
+R_rrss         VIN N150450  1k TC=0,0 
+R_rrbb         0 N15291  1k TC=0,0 
+R_hie         N15275 N15291  1k TC=0,0 
+R_rree         0 N15275  1k TC=0,0 
+R_rrcc         0 N15337  1k TC=0,0 
+R_rrll         0 N15355  1k TC=0,0 
+C_cc11         N150450 N15291  1n  TC=0,0 
+C_cc22         N15337 N15355  1n  TC=0,0 
+C_cpi         N15275 N15291  1n  TC=0,0 
+C_cu         N15337 N15291  1n  TC=0,0 
+C_ccee         0 N15275  1n  TC=0,0 
+V_VF1         N161170 0 DC 0Vdc AC 1Vac 
+V_VT1         VIN N161170  AC 0
++SIN 0 1 1000 0 0 0
+V_Vdc1         VCC 0 15Vdc
+Q_Q1         N14518 N14558 N14505 BC548A 
+R_RB4         0 N19154  30k TC=0,0 
+R_RC1         VCC N19136  100 TC=0,0 
+C_C4         N190341 N19154  1n  TC=0,0 
+R_RE1         0 N19098  1650 TC=0,0 
+R_RB3         N19154 VCC  30k TC=0,0 
+C_C3         N19098 N19124  1n  TC=0,0 
+R_RL1         0 N19124  10k TC=0,0 
+Q_Q2         N19136 N19154 N19098 BC548A 
+R_RS1         N190341 VIN  50 TC=0,0 
+C_ccee1         N199270 N19935  1n  TC=0,0 
+C_cc12         N197430 N19943  1n  TC=0,0 
+R_rrbb1         0 N19943  1k TC=0,0 
+G_G2         N19977 N19935 N19943 N19935 100
+C_cpi1         N19935 N19943  1n  TC=0,0 
+R_hie1         N19935 N19943  1k TC=0,0 
+R_rree1         0 N19935  1k TC=0,0 
+R_rrcc1         0 N19977  1k TC=0,0 
+C_cu1         N19977 N19943  1n  TC=0,0 
+R_rrss1         VIN N197430  1k TC=0,0 
+R_rrll1         0 N199270  1k TC=0,0 
+
+**** RESUMING time_domain.cir ****
+.END
+
+**** 08/20/21 18:32:42 ******* PSpice Lite (April 2011) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-time_domain"  [ D:\SPB_DATA\APII_LAB3\apii_lab3-pspicefiles\schematic1\time_domain.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               BC548A          
+               NPN             
+       LEVEL    1            
+          IS    7.049000E-15 
+          BF  253            
+          NF    1            
+         VAF  127.9          
+         IKF     .07705      
+         ISE   96.260000E-15 
+          NE    1.556        
+          BR    1            
+          NR    1            
+         IKR    3.321        
+         ISC  130.800000E-15 
+          NC    1.602        
+          NK     .5305       
+         ISS    0            
+          RE    0            
+          RC     .8766       
+         CJE   11.500000E-12 
+         VJE     .5          
+         MJE     .6715       
+         CJC    5.250000E-12 
+         VJC     .5697       
+         MJC     .3147       
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          TF  409.500000E-12 
+         XTF   40.12         
+         VTF   10            
+         ITF    1.994        
+          TR   10.000000E-09 
+         XTB    1.5          
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 08/20/21 18:32:42 ******* PSpice Lite (April 2011) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-time_domain"  [ D:\SPB_DATA\APII_LAB3\apii_lab3-pspicefiles\schematic1\time_domain.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)   15.0000  (  VIN)    0.0000  (N14505)    6.5180 (N14514)    0.0000     
+
+(N14518)   14.6070 (N14558)    7.2174 (N15275)    0.0000 (N15291)    0.0000     
+
+(N15337)    0.0000 (N15355)    0.0000 (N19098)    6.5180 (N19124)    0.0000     
+
+(N19136)   14.6070 (N19154)    7.2174 (N19935)    0.0000 (N19943)    0.0000     
+
+(N19977)    0.0000 (N144021)    0.0000                   (N150450)    0.0000    
+
+(N161170)    0.0000                   (N190341)    0.0000                       
+
+(N197430)    0.0000                   (N199270)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_VF1        0.000E+00
+    V_VT1        0.000E+00
+    V_Vdc1      -8.382E-03
+
+    TOTAL POWER DISSIPATION   1.26E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 08/20/21 18:32:42 ******* PSpice Lite (April 2011) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-time_domain"  [ D:\SPB_DATA\APII_LAB3\apii_lab3-pspicefiles\schematic1\time_domain.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .05
+
