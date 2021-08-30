@@ -314,6 +314,13 @@ noprefix "false"
 
 \begin_layout Section
 Cálculo de la polarización:
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:polarizacion EC"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1344,6 +1351,13 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename colector-comun_general.png
+	scale 70
+
+\end_inset
+
 
 \end_layout
 
@@ -1389,6 +1403,294 @@ noprefix "false"
 
  se puede observar el circuito a calcular según los siguientes parámetros
  de diseño:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $h_{fe}=h_{FE}=253$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $I_{C}=1\ [mA]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V_{CC}=12\ [V]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V_{BE}=0.7\ [V]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V_{t}=26\ [mA]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{s}=50\ [\Omega]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{L}=10\ [k\Omega]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Cálculo de la polarización:
+\end_layout
+
+\begin_layout Standard
+Al igual que en la Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:polarizacion EC"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, se tomará como criterio de diseño el voltaje 
+\begin_inset Formula $V_{CE}$
+\end_inset
+
+ para que el punto de trabajo se sitúe en la zona activa del transistor.
+ Pero, en ésta configuración se buscará a diferencia que la caída de voltaje
+ en 
+\begin_inset Formula $R_{E}$
+\end_inset
+
+ sea equivalente a la mitad de 
+\begin_inset Formula $V_{CC}$
+\end_inset
+
+.
+ Esto es:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V_{RE}=\nicefrac{V_{CC}}{2}=6\ [V]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V_{CE}=\nicefrac{V_{CC}}{2}=6\ [V]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Planteando la malla de salida, se obtiene que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-V_{CC}+V_{CE}+I_{E}R_{E}=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+R_{E}=\frac{V_{CC}-V_{CE}}{\frac{h_{FE}+1}{h_{FE}}I_{C}}=\frac{V_{CC}-\nicefrac{V_{CC}}{2}}{\frac{h_{FE}+1}{h_{FE}}I_{C}}=\frac{12-6}{1\times10^{-3}}\ \therefore\ R_{E}=6\ [k\Omega]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Luego, aplicando el mismo concepto de máxima excursión de señal que en la
+ Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:polarizacion EC"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+R_{B}=\frac{h_{FE}R_{E}}{10}=\frac{253\times6000}{10}=151.8\ [k\Omega]\label{eq:RB colector comun}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Teniendo en cuenta que 
+\begin_inset Formula $R_{B}=R_{th}$
+\end_inset
+
+, se plantea la malla de entrada según el modelo equivalente de Thevenin:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-V_{th}+I_{B}R_{B}+V_{BE}+I_{E}R_{E}=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+V_{th}=\nicefrac{I_{C}}{h_{FE}}R_{B}+V_{BE}+\nicefrac{(h_{FE}+1)}{h_{FE}}I_{C}R_{E}=\nicefrac{1}{253}\times151.8+0.7+1\times6=7.3\ [V]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aplicando el mismo concepto desarrollado en la Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:polarizacion EC"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, se puede expresar el resistor 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ como:
+\begin_inset Formula 
+\begin{equation}
+R_{1}=\frac{R_{2}\left(V_{CC}-V_{th}\right)}{V_{th}}=\frac{12-7.3}{7.3}R_{2}=0.64\ R_{2}\label{eq:R1 funcion de R2 colector comun}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Con el mismo criterio de la Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:polarizacion EC"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, y reemplazando la Ec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:R1 funcion de R2 colector comun"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ en la Ec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:RB colector comun"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, se puede expresar 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+ como:
+\begin_inset Formula 
+\begin{equation}
+R_{B}=\frac{0.64}{0.64+1}R_{2}\ \rightarrow\ R_{2}=\frac{R_{B}}{0.39}=388.99\ [k\Omega]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finalmente, 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ será:
+\begin_inset Formula 
+\[
+R_{1}=0.64\times388.99=248.95\ [k\Omega]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En resúmen, la polarización terminará siendo:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{1}=248.95\ [k\Omega]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{2}=388.99\ [k\Omega]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{E}=6\ [k\Omega]$
+\end_inset
+
+.
 \end_layout
 
 \end_body

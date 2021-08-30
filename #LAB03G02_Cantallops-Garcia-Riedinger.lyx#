@@ -314,6 +314,13 @@ noprefix "false"
 
 \begin_layout Section
 Cálculo de la polarización:
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:polarizacion EC"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1338,7 +1345,231 @@ Colector común:
 \end_layout
 
 \begin_layout Standard
-adsfsdfsadfsa
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename colector-comun_general.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito esquemático de un amplificador en configuración de emisor común
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:colector comun"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En la Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:colector comun"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ se puede observar el circuito a calcular según los siguientes parámetros
+ de diseño:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $h_{fe}=h_{FE}=253$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $I_{C}=1\ [mA]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V_{CC}=12\ [V]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V_{BE}=0.7\ [V]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V_{t}=26\ [mA]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{s}=50\ [\Omega]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{L}=10\ [k\Omega]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Cálculo de la polarización:
+\end_layout
+
+\begin_layout Standard
+Al igual que en la Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:polarizacion EC"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, se tomará como criterio de diseño el voltaje 
+\begin_inset Formula $V_{CE}$
+\end_inset
+
+ para que el punto de trabajo se sitúe en la zona activa del transistor.
+ Pero, en ésta configuración se buscará a diferencia que la caída de voltaje
+ en 
+\begin_inset Formula $R_{E}$
+\end_inset
+
+ sea equivalente a la mitad de 
+\begin_inset Formula $V_{CC}$
+\end_inset
+
+.
+ Esto es:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V_{RE}=\nicefrac{V_{CC}}{2}=6\ [V]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V_{CE}=\nicefrac{V_{CC}}{2}=6\ [V]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Planteando la malla de salida, se obtiene que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-V_{CC}+V_{CE}+I_{E}R_{E}=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+R_{E}=\frac{V_{CC}-V_{CE}}{\frac{h_{FE}+1}{h_{FE}}I_{C}}=\frac{V_{CC}-\nicefrac{V_{CC}}{2}}{\frac{h_{FE}+1}{h_{FE}}I_{C}}=\frac{12-6}{1\times10^{-3}}\ \therefore\ R_{E}=6\ [k\Omega]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Luego, aplicando el mismo concepto de máxima excursión de señal que en la
+ Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:polarizacion EC"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+R_{B}=\frac{h_{FE}R_{E}}{10}=\frac{253\times6000}{10}=151.8\ [k\Omega]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Entonces, siguiendo el desarrollo realizado en la Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:polarizacion EC"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, se puede hallar que:
+\begin_inset Formula 
+\[
+R_{2}=\frac{R_{B}}{0.83}=\frac{151.8\times10^{3}}{0.83}=182
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_body
